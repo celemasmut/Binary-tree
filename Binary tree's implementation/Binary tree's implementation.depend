@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1601051251 source:c:\users\celeste\documents\github\binary-tree\binary tree's implementation\empleado.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"Empleado.h"
+
+1597465536 c:\users\celeste\documents\github\binary-tree\binary tree's implementation\empleado.h
+	<stdio.h>
+	<stdlib.h>
+
+1605228699 source:c:\users\celeste\documents\github\binary-tree\binary tree's implementation\binary tree.c
+	"Binary tree.h"
+
+1605227453 c:\users\celeste\documents\github\binary-tree\binary tree's implementation\binary tree.h
+	<stdio.h>
+	<stdlib.h>
+	"Empleado.h"
+
