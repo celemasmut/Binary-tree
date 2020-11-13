@@ -13,10 +13,16 @@ int main()
     inOrder(tree);
     int levels;
     int heigh;
+    int amtNodos;
+    int amtleaf;
     levels=amountOfLevels(tree);
     printf("\nThe amount of levels is: %d",levels);
     heigh=amountOfHeigh(tree);
     printf("\nIt's heigh is %d",heigh);
+    amtNodos=amountOfNodos(tree);
+    printf("\nAmount of Nodos is %d",amtNodos);
+    amtleaf=amountOfleaf(tree);
+    printf("\nleaf %d",amtleaf);
     return 0;
 }
 

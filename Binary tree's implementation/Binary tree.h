@@ -24,5 +24,7 @@ nodoTree*searchingByNameNTree(nodoTree*tree,char lastName[]);
 int bigger(int right,int left);
 int amountOfLevels(nodoTree*tree);
 int amountOfHeigh(nodoTree*tree);
+int amountOfNodos(nodoTree*tree);
+int amountOfleaf(nodoTree*tree);
 
 #endif // BINARY_TREE_H_INCLUDED

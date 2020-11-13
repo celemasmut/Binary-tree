@@ -155,3 +155,37 @@ int amountOfHeigh(nodoTree*tree)
     }
     return heigh;
 }
+
+int amountOfNodos(nodoTree*tree)
+{
+    int amt=0;
+    if(tree)
+    {
+        amt=1;
+        if(tree->left || tree->right)
+        {
+            amt=1+ amountOfNodos(tree->left) + amountOfNodos(tree->right);
+        }
+    }
+    return amt;
+}
+
+int amountOfleaf(nodoTree*tree)
+{
+    int amt=0;
+    if(tree)
+    {
+        if(tree->left || tree->right)
+        {
+            amt=amountOfleaf(tree->left)+amountOfleaf(tree->right);
+            if(tree->left ==NULL)
+            {
+                amt++;
+            }if(tree->right==NULL)
+            {
+                amt++;
+            }
+        }
+    }
+    return amt;
+}
