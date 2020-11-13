@@ -10,7 +10,13 @@ int main()
 {
     nodoTree*tree=inicTree();
     tree=archToTree(tree,archivo1);
-    postOrder(tree);
+    inOrder(tree);
+    int levels;
+    int heigh;
+    levels=amountOfLevels(tree);
+    printf("\nThe amount of levels is: %d",levels);
+    heigh=amountOfHeigh(tree);
+    printf("\nIt's heigh is %d",heigh);
     return 0;
 }
 
