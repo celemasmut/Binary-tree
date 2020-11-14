@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "DoubleListEmployers.h"
 #include "Binary tree.h"
+#include "employers.h"
 #define archivo1 "employers.bin"
-
 nodoTree*archToTree(nodoTree*tree,char archEmployers[]);
+nodo2*treeToDList(nodoTree*tree,nodo2*list);
 
 
 int main()
@@ -39,4 +41,14 @@ nodoTree*archToTree(nodoTree*tree,char archEmployers[])
         fclose(arch);
     }
     return tree;
+}
+nodo2*treeToDList(nodoTree*tree,nodo2*list)
+{
+    if(tree)
+    {//if I want to add in order have to use logic of inorder.
+        tree=treeToDList(tree->left,list);
+        list=addAtheEndDoubList(list,createNewNodoDoubList(tree->dat));
+        tree=treeToDList(tree->right,list);
+    }
+    return list;
 }

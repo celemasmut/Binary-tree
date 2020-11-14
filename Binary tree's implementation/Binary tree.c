@@ -103,6 +103,7 @@ nodoTree*searchingByNameNTree(nodoTree*tree,char lastName[])
         else
         {
             wanted=searchingByNameNTree(tree->left,lastName);
+            //if wanted still empty then search to the right side.
             if(!wanted)
                 wanted=searchingByNameNTree(tree->right,lastName);
         }
@@ -175,17 +176,23 @@ int amountOfleaf(nodoTree*tree)
     int amt=0;
     if(tree)
     {
-        if(tree->left || tree->right)
+        if(!tree->left && !tree->right)
+        {
+            amt++;
+        }
+        else
         {
             amt=amountOfleaf(tree->left)+amountOfleaf(tree->right);
-            if(tree->left ==NULL)
-            {
-                amt++;
-            }if(tree->right==NULL)
-            {
-                amt++;
-            }
         }
     }
     return amt;
+}
+int sumSalary(nodoTree*tree)
+{
+    int total=0;
+    if(tree)
+    {
+        total=tree->dat.sueldo + sumSalary(tree->left) + sumSalary(tree->right);
+    }
+    return total;
 }

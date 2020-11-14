@@ -10,16 +10,35 @@
 	<stdio.h>
 	<stdlib.h>
 
-1605280224 source:c:\users\celeste\documents\github\binary-tree\binary tree's implementation\binary tree.c
+1605310717 source:c:\users\celeste\documents\github\binary-tree\binary tree's implementation\binary tree.c
 	"Binary tree.h"
 
-1605282517 c:\users\celeste\documents\github\binary-tree\binary tree's implementation\binary tree.h
+1605310942 c:\users\celeste\documents\github\binary-tree\binary tree's implementation\binary tree.h
 	<stdio.h>
 	<stdlib.h>
-	"Empleado.h"
+	<strings.h>
+	"employers.h"
 
-1605282517 source:c:\users\celeste\documents\github\binary-tree\binary tree's implementation\main.c
+1605310860 source:c:\users\celeste\documents\github\binary-tree\binary tree's implementation\main.c
 	<stdio.h>
 	<stdlib.h>
+	"DoubleListEmployers.h"
 	"Binary tree.h"
+	"employers.h"
+
+1600486486 c:\users\celeste\documents\github\binary-tree\binary tree's implementation\employers.h
+	<stdio.h>
+	<stdlib.h>
+
+1601515904 source:c:\users\celeste\documents\github\binary-tree\binary tree's implementation\doublelistemployers.c
+	"DoubleListEmployers.h"
+
+1605310220 c:\users\celeste\documents\github\binary-tree\binary tree's implementation\doublelistemployers.h
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	"employers.h"
+
+1601051745 source:c:\users\celeste\documents\github\binary-tree\binary tree's implementation\employers.c
+	"employers.h"
 

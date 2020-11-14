@@ -3,7 +3,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "Empleado.h"
+#include <strings.h>
+#include "employers.h"
 typedef struct nodoTree
 {
     stEmpleado dat;
@@ -26,5 +27,7 @@ int amountOfLevels(nodoTree*tree);
 int amountOfHeigh(nodoTree*tree);
 int amountOfNodos(nodoTree*tree);
 int amountOfleaf(nodoTree*tree);
+int sumSalary(nodoTree*tree);
+
 
 #endif // BINARY_TREE_H_INCLUDED

@@ -35,10 +35,14 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Binary tree.h" />
-		<Unit filename="Empleado.c">
+		<Unit filename="DoubleListEmployers.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="Empleado.h" />
+		<Unit filename="DoubleListEmployers.h" />
+		<Unit filename="employers.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="employers.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
