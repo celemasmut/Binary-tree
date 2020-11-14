@@ -170,13 +170,22 @@ int amountOfNodos(nodoTree*tree)
     }
     return amt;
 }
+int isleaf(nodoTree*tree)
+{
+    int asw=0;
+    if(!tree->left && !tree->right)
+    {
+        asw=1
+    }
+    return 1;
+}
 
 int amountOfleaf(nodoTree*tree)
 {
     int amt=0;
     if(tree)
     {
-        if(!tree->left && !tree->right)
+        if(isleaf)
         {
             amt++;
         }
@@ -195,4 +204,70 @@ int sumSalary(nodoTree*tree)
         total=tree->dat.sueldo + sumSalary(tree->left) + sumSalary(tree->right);
     }
     return total;
+}
+nodoTree*moreRightNodo(nodoTree*tree)
+{
+    nodoTree*moreR=NULL;
+    if(tree->right)
+    {
+        moreR=moreRightNodo(tree->right);
+    }
+    else{
+        moreR=tree;
+    }
+    return moreR;
+}
+
+nodoTree*moreLeftNodo(nodoTree*tree)
+{
+    nodoTree*moreL=NULL;
+    if(tree->left)
+    {
+        moreL=moreLeftNodo(tree->left);
+    }
+    else{
+        moreL=tree;
+    }
+    return moreL;
+}
+
+nodoTree*eraseTreeNodo(nodoTree*tree,char dni[])
+{
+    if(tree)
+    {
+        if(atoi(tree->dat.persona.dni) == atoi(dni))
+        {
+            if(tree->left)
+            {//searching for the more right nodo of the left side. this is to find a nodo that is closer to the value of the one that I want to erase.
+                nodoTree*moreR=moreRightNodo(tree->left);
+                tree->dat.persona.dni=moreR->dat.persona.dni;
+                tree->left=eraseTreeNodo(tree->left,moreR->dat.persona.dni);
+            }
+            else
+            {
+                if(tree->right)
+                {
+                    nodoTree*moreL=moreLeftNodo(tree->right);
+                    tree->dat.persona.dni=moreL->dat.persona.dni;
+                    tree->right=eraseTreeNodo(tree->right,moreL->dat.persona.dni);
+                }
+                else
+                {
+                    if(isleaf)
+                    {
+                        free(tree);
+                        tree=NULL;
+                    }
+                }
+            }
+        }
+        if( atoi(dni) > atoi(tree->dat.persona.dni))
+        {
+            tree->right=eraseTreeNodo(tree->right,dni);
+        }
+        else{
+            tree->left=eraseTreeNodo(tree->left,dni);
+        }
+    }
+    return tree;
 }
